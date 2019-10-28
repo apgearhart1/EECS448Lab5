@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create a Post!</title>
+  </head>
+  <body>
+      <h1 style="color: orange;">Create a blog post here!</h1> <br>
+      <form onsubmit="return validate()"class="" action="CreatePosts.php" method="post">
+        User-ID<input type="text" id="user_id" name="user_id" value=""> <br>
+        Blog Post <input style="width: 300px; height: 300px;" id="post" type="text" name="post" value=""> <br>
+        Submit: <input type="submit" name="" value="Submit">
+
+      </form>
+
+      <script type="text/javascript">
+      function validate() {
+        let k = document.getElementById('post');
+        if (k.value == "" || k.value == " "){
+          alert("Failed input");
+          return false;
+        }
+        return true;
+      }
+      </script>
+  </body>
+</html>

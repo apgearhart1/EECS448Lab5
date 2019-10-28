@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create User</title>
+  </head>
+  <body>
+    <h1 style="color:orange;">CREATE A NEW USER</h1>
+
+    <form onsubmit="return validate()"class="" id = "form"action="CreateUser.php" method="POST">
+      Enter a UserID: <input type="text" name="user" id = "user" value="">
+      <br>
+
+      Submit: <input type="submit" name="submit" value="Submit">
+
+      <script type="text/javascript">
+      function validate() {
+        let k = document.getElementById('user');
+        if (k.value == "" || k.value == " "){
+          alert("Failed input");
+          return false;
+        }
+        return true;
+      }
+
+      </script>
+    </form>
+
+
+
+  </body>
+</html>
